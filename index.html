@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<link rel="stylesheet" href="styles.css"> 
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ランダムリンク</title>
+    <script>
+        function redirectToRandomLink() {
+            const links = [
+                'https://portal.educ.chs.nihon-u.ac.jp/',
+                'https://osawa-lab.com/'
+            ];
+            const randomIndex = Math.floor(Math.random() * links.length);
+            window.location.href = links[randomIndex];
+        }
+
+        window.onload = redirectToRandomLink; // ページロード時に関数を呼び出す
+    </script>
+</head>
+<body>
+    <div id="container">
+        <span></span>
+        <span></span>
+        <span></span>
+        <p>LOADING</p>
+    </div>
+</body>
+</html>
